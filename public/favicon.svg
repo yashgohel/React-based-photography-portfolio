@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background circle (matching dark cinematic theme) -->
+  <circle cx="256" cy="256" r="240" fill="#0b172a" stroke="rgba(255, 255, 255, 0.1)" stroke-width="12" />
+  
+  <!-- Lens outer glass reflections -->
+  <circle cx="256" cy="256" r="180" stroke="rgba(255, 255, 255, 0.2)" stroke-width="8" />
+  <circle cx="256" cy="256" r="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="20" />
+
+  <!-- Aperture Blades (Golden Ratio / Camera Lens lines) -->
+  <g stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="110" stroke-width="16" />
+    <path d="M333.78 178.22 L411.23 222.94" stroke="rgba(255, 255, 255, 0.8)" />
+    <path d="M333.78 333.78 L333.78 423.23" stroke="rgba(255, 255, 255, 0.8)" />
+    <path d="M178.22 333.78 L100.77 289.06" stroke="rgba(255, 255, 255, 0.8)" />
+    <path d="M178.22 178.22 L178.22 88.77" stroke="rgba(255, 255, 255, 0.8)" />
+    <path d="M256 146 A110 110 0 0 1 366 256" stroke-width="16" />
+    <path d="M366 256 A110 110 0 0 1 256 366" stroke-width="16" />
+    <path d="M256 366 A110 110 0 0 1 146 256" stroke-width="16" />
+    <path d="M146 256 A110 110 0 0 1 256 146" stroke-width="16" />
+  </g>
+
+  <!-- Lens reflection flare (cool blue/cyan gradient overlay) -->
+  <path d="M200 130 A140 140 0 0 1 380 310" stroke="url(#lensFlare)" stroke-width="14" stroke-linecap="round" opacity="0.65" />
+
+  <defs>
+    <linearGradient id="lensFlare" x1="200" y1="130" x2="380" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+  </defs>
+</svg>
