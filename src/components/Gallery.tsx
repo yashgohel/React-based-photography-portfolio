@@ -40,11 +40,10 @@ export default function Gallery({ onSelectPhoto }: GalleryProps) {
             type="button"
             id={`filter-${cat.toLowerCase()}`}
             onClick={() => setFilter(cat)}
-            className={`rounded-full px-5 py-2 text-xs font-medium tracking-wide transition-all duration-300 cursor-pointer ${
-              filter === cat
-                ? 'bg-foreground text-background scale-[1.02] shadow-lg'
-                : 'liquid-glass text-muted-foreground hover:text-foreground hover:scale-[1.02]'
-            }`}
+            className={`rounded-full px-5 py-2 text-xs font-medium tracking-wide transition-all duration-300 cursor-pointer ${filter === cat
+              ? 'bg-foreground text-background scale-[1.02] shadow-lg'
+              : 'liquid-glass text-muted-foreground hover:text-foreground hover:scale-[1.02]'
+              }`}
           >
             {cat}
           </button>
@@ -52,7 +51,7 @@ export default function Gallery({ onSelectPhoto }: GalleryProps) {
       </div>
 
       {/* Photos Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {filteredPhotos.map((photo) => (
           <div
             key={photo.id}
@@ -76,14 +75,14 @@ export default function Gallery({ onSelectPhoto }: GalleryProps) {
               <span className="text-[10px] text-muted-foreground uppercase tracking-widest bg-white/5 border border-white/5 rounded-full px-3 py-1 w-max mb-3">
                 {photo.category}
               </span>
-              
+
               <h3
                 className="text-2xl text-foreground font-normal tracking-tight mb-2"
                 style={{ fontFamily: "'Instrument Serif', serif" }}
               >
                 {photo.title}
               </h3>
-              
+
               <p className="text-muted-foreground text-xs leading-relaxed mb-4 line-clamp-2">
                 {photo.description}
               </p>
