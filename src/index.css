@@ -122,3 +122,13 @@
 .animate-film-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Hide scrollbar globally while keeping scroll functionality active */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
